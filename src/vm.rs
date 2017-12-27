@@ -11,10 +11,10 @@ impl VM {
     pub fn run(&mut self) {
         use rustc_version_runtime;
 
-        println!("Initializing Semuru...");
+        println!("Initializing Semeru...");
         println!("Version: {}", vergen::semver());
         println!("Platform: {}", vergen::target());
-        println!("Semuru git commit: {}", vergen::sha());
+        println!("Semeru git commit: {}", vergen::sha());
         let rustc_meta = rustc_version_runtime::version_meta();
         println!(
             "Rustc version: {} {:?}",

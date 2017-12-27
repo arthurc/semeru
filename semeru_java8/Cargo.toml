@@ -1,0 +1,7 @@
+[package]
+name = "semeru_java8"
+version = "0.1.0"
+authors = ["Arthur Carlsson <arthur@kiron.net>"]
+
+[dependencies]
+semeru_core = { path = "../semeru_core", version = "*" }

@@ -1,7 +1,8 @@
 [package]
-name = "semuru_core"
+name = "semeru_core"
 version = "0.1.0"
 authors = ["Arthur Carlsson <arthur@kiron.net>"]
 
 [dependencies]
 error-chain = "0.11"
+nom = "^3.2"

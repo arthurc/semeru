@@ -1,16 +1,21 @@
 [package]
-name = "semuru"
+name = "semeru"
 version = "0.1.0"
 authors = ["Arthur Carlsson <arthur@kiron.net>"]
+
+[features]
+default = ["java8"]
+java8 = ["semeru_java8"]
 
 [dependencies]
 error-chain = "0.11"
 rustc_version_runtime = "0.1"
-semuru_core = { path = "semuru_core", version = "0.1" }
+semeru_core = { path = "semeru_core", version = "*" }
+semeru_java8 = { path = "semeru_java8", version = "*", optional = true }
 
 [build-dependencies]
 vergen = "*"
 
 [[bin]]
-name = "semuru"
+name = "semeru"
 doc = false
