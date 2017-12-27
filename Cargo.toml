@@ -1,0 +1,12 @@
+[package]
+name = "semuru"
+version = "0.1.0"
+authors = ["Arthur Carlsson <arthur@kiron.net>"]
+
+[dependencies]
+error-chain = "0.11"
+rustc_version_runtime = "0.1"
+semuru_core = { path = "semuru_core", version = "0.1" }
+
+[build-dependencies]
+vergen = "*"
