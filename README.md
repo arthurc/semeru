@@ -12,3 +12,9 @@
 [li]: COPYING
 
 Semuru is a Java Virtual Machine written in [Rust](https://rust-lang.org/).
+
+## License
+
+Semuru is free and open source software distributed under the terms of the [MIT License][lm].
+
+[lm]: LICENSE-MIT
