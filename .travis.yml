@@ -13,7 +13,6 @@ cache: cargo
 
 before_script:
   - export PATH="$PATH:$HOME/.cargo/bin"
-  - which rustfmt || cargo install rustfmt-nightly
 
 # Generate documentation, compile the engine, run tests.
 script: |
