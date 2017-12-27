@@ -1,11 +1,17 @@
 extern crate semeru;
 
-fn main() {
-    semeru::VM::build()
+fn run() -> semeru::Result<()> {
+    let mut vm = semeru::VM::build()
         .expect("Failed to initialize")
-        #[cfg(feature = "java8")]
-        .with_module(semeru::java8::Java8Module::new())
-        .build()
-        .expect("Failed to build VM")
-        .run();
+        .with_module(semeru::java8::Module::new())?
+        .build()?;
+
+    Ok(vm.run())
+}
+
+fn main() {
+    if let Err(e) = run() {
+        println!("Failed to execute VM: {}", e);
+        ::std::process::exit(1);
+    }
 }

@@ -1,5 +1,6 @@
 use errors::Result;
 use vergen;
+use core::{Module};
 
 pub struct VM {}
 
@@ -28,6 +29,12 @@ pub struct Builder {}
 impl Builder {
     pub fn new() -> Result<Self> {
         Ok(Builder {})
+    }
+
+    pub fn with_module<M>(self, module: M) -> Result<Self>
+    where M: Module
+    {
+        Ok(self)
     }
 
     pub fn build(&self) -> Result<VM> {
