@@ -17,5 +17,4 @@ before_script:
 # Generate documentation, compile the engine, run tests.
 script: |
   cargo doc --all --no-deps -v &&
-  # Build and test without profiler
-  cargo test --all -v &&
+  cargo test --all -v
