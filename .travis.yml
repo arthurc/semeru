@@ -19,8 +19,3 @@ script: |
   cargo doc --all --no-deps -v &&
   # Build and test without profiler
   cargo test --all -v &&
-
-script:
-  - cargo fmt -- --write-mode=diff
-  - cargo build
-  - cargo test
