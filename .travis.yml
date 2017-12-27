@@ -5,11 +5,21 @@ rust:
   - beta
   - nightly
 
+# Since this build doesn't require sudo, we can turn it off and improve build
+# performance.
+sudo: false
+
 cache: cargo
 
 before_script:
   - export PATH="$PATH:$HOME/.cargo/bin"
   - which rustfmt || cargo install rustfmt-nightly
+
+# Generate documentation, compile the engine, run tests.
+script: |
+  cargo doc --all --no-deps -v &&
+  # Build and test without profiler
+  cargo test --all -v &&
 
 script:
   - cargo fmt -- --write-mode=diff
