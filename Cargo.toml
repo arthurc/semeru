@@ -10,3 +10,7 @@ semuru_core = { path = "semuru_core", version = "0.1" }
 
 [build-dependencies]
 vergen = "*"
+
+[[bin]]
+name = "semuru"
+doc = false
