@@ -10,8 +10,8 @@ java8 = ["semeru_java8"]
 [dependencies]
 error-chain = "0.11"
 rustc_version_runtime = "0.1"
-semeru_core = { path = "semeru_core", version = "*" }
-semeru_java8 = { path = "semeru_java8", version = "*", optional = true }
+semeru_core = { path = "semeru_core" }
+semeru_java8 = { path = "semeru_java8", optional = true }
 
 [build-dependencies]
 vergen = "*"
@@ -19,3 +19,9 @@ vergen = "*"
 [[bin]]
 name = "semeru"
 doc = false
+
+[[bin]]
+name = "semeruc"
+doc = false
+
+[workspace]
