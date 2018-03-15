@@ -13,8 +13,10 @@ cache: cargo
 
 before_script:
   - export PATH="$PATH:$HOME/.cargo/bin"
+  - rustup component add rustfmt-preview
 
 # Generate documentation, compile the engine, run tests.
 script: |
   cargo doc --all --no-deps -v &&
+  cargo fmt -- --write-mode=diff &&
   cargo test --all -v
