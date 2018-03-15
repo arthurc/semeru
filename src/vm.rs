@@ -1,6 +1,6 @@
 use errors::Result;
 use vergen;
-use core::{Module};
+use core::Module;
 
 pub struct VM {}
 
@@ -32,7 +32,8 @@ impl Builder {
     }
 
     pub fn with_module<M>(self, module: M) -> Result<Self>
-    where M: Module
+    where
+        M: Module,
     {
         Ok(self)
     }

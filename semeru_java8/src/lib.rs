@@ -6,15 +6,13 @@ use semeru_core::{Module, Result};
 pub struct Java8Module;
 
 impl Java8Module {
-  pub fn new() -> Self {
-    Default::default()
-  }
+    pub fn new() -> Self {
+        Default::default()
+    }
 }
 
 impl Module for Java8Module {
-
-  fn build(self) -> Result<()> {
-    Ok(())
-  }
-
+    fn build(self) -> Result<()> {
+        Ok(())
+    }
 }
